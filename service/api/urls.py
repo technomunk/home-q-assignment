@@ -1,8 +1,12 @@
-from django.urls import path
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
 
-from .views import ApartmentsView
+from .views import ApartmentViewSet
 
+_apartment_router = DefaultRouter()
+_apartment_router.register("apartments", ApartmentViewSet)
 
 urlpatterns = [
-    path("apartments/", ApartmentsView.as_view()),
+    path("", include(_apartment_router.urls)),
+    path("auth/", include("rest_framework.urls")),
 ]

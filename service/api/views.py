@@ -1,15 +1,8 @@
-from logging import getLogger
+from rest_framework.viewsets import ModelViewSet
 
-from django.http import HttpRequest, JsonResponse
-from django.views import View
-
-from .models import Apartment
-
-_logger = getLogger(__name__)
+from api import models, serializers
 
 
-class ApartmentsView(View):
-    def get(self, request: HttpRequest) -> JsonResponse:
-        apartments = Apartment.objects.all()
-        serialized_data = [apartment.serialize() for apartment in apartments]
-        return JsonResponse(serialized_data, safe=False)
+class ApartmentViewSet(ModelViewSet):
+    queryset = models.Apartment.objects.all()
+    serializer_class = serializers.ApartmentSerializer

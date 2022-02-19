@@ -16,14 +16,3 @@ class Apartment(models.Model):
     longitude = models.DecimalField(max_digits=10, decimal_places=7)
 
     description = models.TextField()
-
-    def serialize(self):
-        return {
-            "id": self.id,
-            "street": self.street,
-            "street_number": self.street_number,
-            "city": self.city,
-            "rent": self.rent,
-            "latitude": self.latitude,
-            "longitude": self.longitude
-        }
