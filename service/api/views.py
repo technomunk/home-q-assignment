@@ -8,3 +8,9 @@ class ApartmentViewSet(viewsets.ModelViewSet):
     # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = models.Apartment.objects.all()
     serializer_class = serializers.ApartmentSerializer
+
+
+class BuildingViewSet(viewsets.ModelViewSet):
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    queryset = models.Building.objects.all()
+    serializer_class = serializers.BuildingSerializer
