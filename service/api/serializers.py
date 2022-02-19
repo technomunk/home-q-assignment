@@ -6,14 +6,4 @@ from api import models
 class ApartmentSerializer(rest_serializers.ModelSerializer):
     class Meta:
         model = models.Apartment
-        fields = [
-            "id",
-            "city",
-            "street",
-            "street_number",
-            "rooms",
-            "floor",
-            "area",
-            "rent",
-            "description",
-        ]
+        fields = "__all__"

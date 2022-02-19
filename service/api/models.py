@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Apartment(models.Model):
-    id = models.CharField(primary_key=True, max_length=10)
+    id = models.CharField(primary_key=True, max_length=10, editable=False)
 
     city = models.CharField(max_length=128)
     street = models.CharField(max_length=128)
@@ -15,4 +15,4 @@ class Apartment(models.Model):
     latitude = models.DecimalField(max_digits=10, decimal_places=7)
     longitude = models.DecimalField(max_digits=10, decimal_places=7)
 
-    description = models.TextField()
+    description = models.TextField(default="")
