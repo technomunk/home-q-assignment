@@ -29,9 +29,3 @@ class Apartment(models.Model):
         blank=True,
         null=True,
     )
-
-
-from django.contrib import admin
-
-admin.register(Building)
-admin.register(Apartment)

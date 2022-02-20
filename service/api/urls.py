@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
@@ -11,5 +10,4 @@ _router.register("buildings", BuildingViewSet)
 urlpatterns = [
     path("", include(_router.urls)),
     path("auth/", include("rest_framework.urls")),
-    path('admin/', admin.site.urls),
 ]
