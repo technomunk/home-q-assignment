@@ -67,3 +67,8 @@ However, we recommend to not go to experimental with exotic libraries.
 ### What if I get stuck?
 If you get stuck with the assignment you can reach out to your contact at HomeQ.
 We will check with you and try to help you to move forward.  
+
+## Result
+
+1. Figured out logging
+2. Decided to go with [rest_framework](https://www.django-rest-framework.org) to speed up development
